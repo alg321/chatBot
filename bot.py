@@ -127,7 +127,7 @@ def get_forecast_weather_from_db(city, date, specific_time=None):
                 if forecast:
                     response = (f" Weather in {normalized_city} for {specific_time.strftime('%A %d %B %Y %I:%M %p')}:\n"
                                 f"- Description: {forecast.description.capitalize()}\n"
-                                f"- Temperature: {forecast.temp_min}°C\n")  # Assuming temp_min and temp_max are the same
+                                f"- Temperature: {forecast.temp_min}°C\n")  # min and max are the same at specific time
                     logging.debug(f"Found forecast data: {response}")
                     return response
                 else:
